@@ -44,7 +44,20 @@ Generate yaml file to hold the cert and passcode for installation.
 helm show values rampartai/rampart-tetragon > my-cert.yaml
 ```
 
+# Update cert 
 Update my-cert.yaml with the correct values using your favorite editor.
+
+Take all the lines between BEGIN and END in crt file and past into cert field of my-cred.yaml
+
+```
+-----BEGIN CERTIFICATE-----
+MII
+...
+E4M=
+-----END CERTIFICATE-----
+```
+
+In notepad++, type the passphrase, select it and choose Plugins->MIMI Tools->Base64 Encode and paste that into key field of my-cred.yaml
 
 Install specific helm chart
 ```
