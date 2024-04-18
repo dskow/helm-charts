@@ -58,6 +58,12 @@ See status of pods
 kubectl get pods --all-namespaces -o wide
 ```
 
+See logs for rampart agent
+
+```
+kubectl logs -n kube-system daemonset/rampart-agent-daemonset -f
+```
+
 Uninstall helm chart
 
 ```
