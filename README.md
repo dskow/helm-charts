@@ -48,5 +48,5 @@ Update my-cert.yaml with the correct values using your favorite editor.
 
 Install specific helm chart
 ```
-helm install -f my-cert.yaml rampart-tetragon rampartai/rampart-tetragon --dry-run --debug
+helm install -f my-cert.yaml rampart-tetragon rampartai/rampart-tetragon
 helm status rampart-tetragon
