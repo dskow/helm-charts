@@ -47,6 +47,14 @@ helm show values rampartai/rampart-tetragon > my-cert.yaml
 # Update cert 
 Update my-cert.yaml with the correct values using your favorite editor.
 
+convert agent pfx to crt
+
+**NOTE**: obtain my-agent-cert.pfx via an Rampart-ai representative.
+
+```
+openssl pkcs12 -in my-agent-cert.pfx -clcerts -nokeys -out temp.crt -legacy
+```
+
 Take all the lines between BEGIN and END in crt file and past into cert field of my-cred.yaml
 
 ```
