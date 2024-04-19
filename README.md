@@ -6,7 +6,7 @@
 [license-img]: https://img.shields.io/badge/license-MIT-blue
 [license]: https://github.com/dskow/helm-charts/blob/main/LICENSE
 
-Open source projects helm chars on a [Kubernetes](https://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+Open source helm charts on a [Kubernetes](https://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Charts
 
