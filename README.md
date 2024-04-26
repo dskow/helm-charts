@@ -68,17 +68,15 @@ convert agent pfx to crt
 **NOTE**: obtain my-agent-cert.pfx via an Rampart-ai representative.
 
 ```
-openssl pkcs12 -in my-agent-cert.pfx -clcerts -nokeys -out temp.crt -legacy
+openssl base64 -in ./kubetest-quake3stack-agent-cert.pfx -out pem.pem
 ```
 
-Take all the lines between BEGIN and END in crt file and past into cert field of my-cred.yaml
+Take all the lines pem file, remove the line breaks, and past into cert field of my-cred.yaml
+
+Here is command to reduce pem file to one line.
 
 ```
------BEGIN CERTIFICATE-----
-MII
-...
-E4M=
------END CERTIFICATE-----
+tr -d "\n" < pem.pem
 ```
 
 In notepad++, type the passphrase, select it and choose Plugins->MIMI Tools->Base64 Encode and paste that into key field of my-cred.yaml
