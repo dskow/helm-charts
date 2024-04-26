@@ -91,7 +91,7 @@ Install rampart-tetragon helm chart into the rampart-system namespace.
 
 ```
 helm install -f my-cert.yaml rampart-tetragon rampartai/rampart-tetragon -n rampart-system --create-namespace
-helm status rampart-tetragon -n kube-system
+helm status rampart-tetragon -n rampart-system
 ```
 
 See status of pods
@@ -109,5 +109,5 @@ kubectl logs -n kube-system daemonset/rampart-agent-daemonset -f
 Uninstall helm chart
 
 ```
-helm uninstall rampart-tetragon -n kube-system
+helm uninstall rampart-tetragon -n rampart-system
 ```
