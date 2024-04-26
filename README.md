@@ -81,6 +81,12 @@ tr -d "\n" < pem.pem
 
 In notepad++, type the passphrase, select it and choose Plugins->MIMI Tools->Base64 Encode and paste that into key field of my-cred.yaml
 
+Here is an example command to generate the encoded key.
+
+```
+echo -n 'my_cert_key' | base64
+```
+
 Install specific helm chart
 ```
 helm install -f my-cert.yaml rampart-tetragon rampartai/rampart-tetragon -n kube-system
