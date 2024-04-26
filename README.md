@@ -22,7 +22,23 @@ Open source helm charts on a [Kubernetes](https://kubernetes.io) cluster using t
 curl -L https://git.io/get_helm.sh | bash
 helm init
 ```
+# Install Tetragon
 
+This needs to be installed first so it sets up the networking correctly.
+
+```
+helm repo add cilium https://helm.cilium.io
+helm repo update
+helm install tetragon cilium/tetragon -n kube-system
+kubectl rollout status -n kube-system ds/tetragon -w
+```
+
+Detailed guide for tetragon installation is at [Install Tetragon](https://tetragon.io/docs/getting-started/install-k8s/)
+
+The dnscore subnets should not change to 10.0.0.x subnet. Use this command to see the subnets for the kubernetes pods.
+```
+kubectl get pod --all-namespaces -o wide
+```
 
 ## Installing Dskow Community Helm Repository
 
