@@ -110,4 +110,5 @@ Uninstall helm chart
 
 ```
 helm uninstall rampart-tetragon -n rampart-system
+helm uninstall tetragon -n kube-system
 ```
