@@ -87,9 +87,10 @@ Here is an example command to generate the encoded key.
 echo -n 'my_cert_key' | base64
 ```
 
-Install specific helm chart
+Install rampart-tetragon helm chart into the rampart-system namespace.
+
 ```
-helm install -f my-cert.yaml rampart-tetragon rampartai/rampart-tetragon -n kube-system
+helm install -f my-cert.yaml rampart-tetragon rampartai/rampart-tetragon -n rampart-system --create-namespace
 helm status rampart-tetragon -n kube-system
 ```
 
