@@ -71,7 +71,7 @@ convert agent pfx to crt
 openssl base64 -in ./kubetest-quake3stack-agent-cert.pfx -out pem.pem
 ```
 
-Take all the lines pem file, remove the line breaks, and past into cert field of my-cred.yaml
+Take all the lines pem file, reduce to one line, and paste into cert field of my-cred.yaml
 
 Here is command to reduce pem file to one line.
 
