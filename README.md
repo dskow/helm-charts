@@ -39,6 +39,15 @@ The dnscore subnets should not change to 10.0.0.x subnet. Use this command to se
 ```
 kubectl get pod --all-namespaces -o wide
 ```
+## Installing tracing policies.
+
+These configure what tetragon logs besides the default process logging.
+
+[Tracing policy examples](https://github.com/cilium/tetragon/tree/main/examples/tracingpolicy)
+
+```
+kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/tcp-connect.yaml
+```
 
 ## Installing Dskow Community Helm Repository
 
