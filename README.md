@@ -49,6 +49,15 @@ These configure what tetragon logs besides the default process logging.
 kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/tcp-connect.yaml
 ```
 
+## Remove tracing policy
+
+Here is step to remove policy.  This happens in real-time.
+
+```
+kubectl get TracingPolicy
+kubectl delete TracingPolicy connect
+```
+
 ## Installing Dskow Community Helm Repository
 
 ```
